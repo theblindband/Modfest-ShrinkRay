@@ -26,13 +26,9 @@ public class ShrinkRayItem extends Item {
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand) {
-        level.playSound(player, player, SoundEvents.SHULKER_SHOOT, SoundSource.PLAYERS, 0.8F, 3.0F);
-        return super.use(level, player, usedHand);
-    }
-
-    @Override
     public InteractionResult interactLivingEntity(ItemStack stack, Player player, LivingEntity interactionTarget, InteractionHand usedHand) {
+        Level level = player.level();
+        level.playSound(player, player, SoundEvents.SHULKER_SHOOT, SoundSource.PLAYERS, 0.8F, 3.0F);
         interactionTarget.removeEffect(ModEffects.ENLARGE_EFFECT);
         interactionTarget.addEffect(new MobEffectInstance(ModEffects.SHRINK_EFFECT, 1200, SHRINK_LEVEL), interactionTarget);
         return super.interactLivingEntity(stack, player, interactionTarget, usedHand);
