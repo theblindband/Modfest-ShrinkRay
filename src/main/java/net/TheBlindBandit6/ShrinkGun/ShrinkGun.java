@@ -1,5 +1,9 @@
 package net.TheBlindBandit6.ShrinkGun;
 
+import net.TheBlindBandit6.ShrinkGun.effect.ModEffects;
+import net.TheBlindBandit6.ShrinkGun.entity.ModEntities;
+import net.TheBlindBandit6.ShrinkGun.item.ModCreativeModeTabs;
+import net.TheBlindBandit6.ShrinkGun.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -35,11 +39,11 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(ShrinkGun.MODID)
+@Mod(ShrinkGun.MOD_ID)
 public class ShrinkGun
 {
     // Define mod id in a common place for everything to reference
-    public static final String MODID = "shrink_gun";
+    public static final String MOD_ID = "shrink_gun";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
@@ -50,12 +54,11 @@ public class ShrinkGun
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        // Register the Deferred Register to the mod event bus so blocks get registered
-        //BLOCKS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so items get registered
-        //ITEMS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so tabs get registered
-        //CREATIVE_MODE_TABS.register(modEventBus);
+        //ModBlocks.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
+        ModEffects.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
@@ -94,7 +97,7 @@ public class ShrinkGun
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {
         @SubscribeEvent
