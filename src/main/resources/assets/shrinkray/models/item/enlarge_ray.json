@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "shrink_gun:item/shrink_gun"
+    "layer0": "shrinkray:item/enlarge_ray"
   }
 }

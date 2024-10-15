@@ -1,0 +1,9 @@
+{
+  "creativetab.shrinkray": "Shrink Ray",
+
+  "item.shrinkray.shrink_ray": "Shrink Ray",
+  "item.shrinkray.enlarge_ray": "Enlarge Ray",
+
+  "effect.shrinkray.shrink": "Shrink",
+  "effect.shrinkray.enlarge": "Enlarge"
+}

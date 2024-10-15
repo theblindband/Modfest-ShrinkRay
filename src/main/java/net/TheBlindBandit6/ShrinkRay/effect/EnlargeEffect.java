@@ -1,4 +1,4 @@
-package net.TheBlindBandit6.ShrinkGun.effect;
+package net.TheBlindBandit6.ShrinkRay.effect;
 
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;

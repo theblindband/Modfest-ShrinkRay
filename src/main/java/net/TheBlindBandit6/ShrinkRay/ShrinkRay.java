@@ -1,8 +1,8 @@
-package net.TheBlindBandit6.ShrinkGun;
+package net.TheBlindBandit6.ShrinkRay;
 
-import net.TheBlindBandit6.ShrinkGun.effect.ModEffects;
-import net.TheBlindBandit6.ShrinkGun.item.ModCreativeModeTabs;
-import net.TheBlindBandit6.ShrinkGun.item.ModItems;
+import net.TheBlindBandit6.ShrinkRay.effect.ModEffects;
+import net.TheBlindBandit6.ShrinkRay.item.ModCreativeModeTabs;
+import net.TheBlindBandit6.ShrinkRay.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -24,17 +24,17 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(ShrinkGun.MOD_ID)
-public class ShrinkGun
+@Mod(ShrinkRay.MOD_ID)
+public class ShrinkRay
 {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "shrink_gun";
+    public static final String MOD_ID = "shrinkray";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public ShrinkGun(IEventBus modEventBus, ModContainer modContainer)
+    public ShrinkRay(IEventBus modEventBus, ModContainer modContainer)
     {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
