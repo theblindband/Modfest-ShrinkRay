@@ -1,8 +1,8 @@
 package net.TheBlindBandit6.ShrinkRay;
 
 import net.TheBlindBandit6.ShrinkRay.effect.ModEffects;
-import net.TheBlindBandit6.ShrinkRay.item.ModCreativeModeTabs;
 import net.TheBlindBandit6.ShrinkRay.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -41,7 +41,6 @@ public class ShrinkRay
 
         //ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
-        ModCreativeModeTabs.register(modEventBus);
         ModEffects.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
@@ -70,7 +69,12 @@ public class ShrinkRay
     }
 
     // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {    }
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.SHRINK_RAY);
+            event.accept(ModItems.ENLARGE_RAY);
+        }
+    }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

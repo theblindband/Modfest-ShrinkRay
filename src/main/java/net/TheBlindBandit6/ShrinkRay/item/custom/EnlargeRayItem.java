@@ -6,6 +6,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.LivingEntity;
@@ -27,17 +28,15 @@ public class EnlargeRayItem extends Item {
     }
 
     @Override
-    public UseAnim getUseAnimation(ItemStack stack) {
-        return UseAnim.BOW;
+    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand) {
+        level.playSound(player, player, SoundEvents.SHULKER_SHOOT, SoundSource.PLAYERS, 0.8F, 3.0F);
+        return super.use(level, player, usedHand);
     }
 
     @Override
     public InteractionResult interactLivingEntity(ItemStack stack, Player player, LivingEntity interactionTarget, InteractionHand usedHand) {
-        Level level = player.level();
-        level.playSound(player, player, SoundEvents.SHULKER_SHOOT, SoundSource.PLAYERS, 1.0F, 3.0F);
         interactionTarget.removeEffect(ModEffects.SHRINK_EFFECT);
         interactionTarget.addEffect(new MobEffectInstance(ModEffects.ENLARGE_EFFECT, 1200, ENLARGE_LEVEL), interactionTarget);
-        player.getCooldowns().addCooldown(this, 40);
         return super.interactLivingEntity(stack, player, interactionTarget, usedHand);
     }
 
