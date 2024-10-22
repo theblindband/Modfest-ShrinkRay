@@ -58,12 +58,12 @@ public class ShrinkRay
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
+        LOGGER.info("Shrink Ray Starting");
 
         if (Config.logDirtBlock)
             LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
 
-        LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
+        //LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
 
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
@@ -81,7 +81,7 @@ public class ShrinkRay
     public void onServerStarting(ServerStartingEvent event)
     {
         // Do something when the server starts
-        LOGGER.info("HELLO from server starting");
+        //LOGGER.info("HELLO from server starting");
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -92,8 +92,8 @@ public class ShrinkRay
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            //LOGGER.info("HELLO FROM CLIENT SETUP");
+            //LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
     }
 }
