@@ -13,7 +13,7 @@ public class EnlargeRayModel extends GeoModel<EnlargeRayItem> {
 
     @Override
     public ResourceLocation getTextureResource(EnlargeRayItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(ShrinkRay.MOD_ID,"textures/item/enlarge_ray.png");
+        return ResourceLocation.fromNamespaceAndPath(ShrinkRay.MOD_ID,"textures/item/enlarge_ray_model.png");
     }
 
     @Override

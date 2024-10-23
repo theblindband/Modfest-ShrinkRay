@@ -24,7 +24,6 @@ import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.AnimatableManager;
 import software.bernie.geckolib.util.GeckoLibUtil;
-
 import java.util.function.Consumer;
 
 public class ShrinkRayItem extends Item implements GeoItem {
@@ -45,6 +44,11 @@ public class ShrinkRayItem extends Item implements GeoItem {
         return super.interactLivingEntity(stack, player, interactionTarget, usedHand);
     }
 
+    @Override
+    public UseAnim getUseAnimation(ItemStack stack) {
+        return UseAnim.BOW;
+    }
+
     public static ItemAttributeModifiers createAttributes() {
         return ItemAttributeModifiers.builder()
                 .add(
@@ -55,7 +59,6 @@ public class ShrinkRayItem extends Item implements GeoItem {
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-
     }
 
     @Override

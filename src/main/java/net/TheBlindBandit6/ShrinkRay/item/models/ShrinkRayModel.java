@@ -13,7 +13,7 @@ public class ShrinkRayModel extends GeoModel<ShrinkRayItem> {
 
     @Override
     public ResourceLocation getTextureResource(ShrinkRayItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(ShrinkRay.MOD_ID,"textures/item/shrink_ray.png");
+        return ResourceLocation.fromNamespaceAndPath(ShrinkRay.MOD_ID,"textures/item/shrink_ray_model.png");
     }
 
     @Override

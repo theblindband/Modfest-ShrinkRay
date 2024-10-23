@@ -28,7 +28,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('N', Items.NETHER_STAR)
                 .define('O', Blocks.OBSERVER)
                 .define('X', Items.POPPED_CHORUS_FRUIT)
-                .define('S', Blocks.GLASS)
+                .define('S', Blocks.CHISELED_COPPER)
                 .define('R', Blocks.REPEATER)
                 .unlockedBy("has_nether_star", has(Items.NETHER_STAR)).save(recipeOutput);
 
@@ -41,7 +41,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('N', Items.NETHER_STAR)
                 .define('O', Blocks.OBSERVER)
                 .define('X', Items.POPPED_CHORUS_FRUIT)
-                .define('S', Blocks.GLASS)
+                .define('S', Blocks.CHISELED_COPPER)
                 .define('C', Blocks.COMPARATOR)
                 .unlockedBy("has_nether_star", has(Items.NETHER_STAR)).save(recipeOutput);
     }

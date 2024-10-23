@@ -1,5 +1,5 @@
-// 1.21.1	2024-10-15T22:30:26.975726	Recipes
+// 1.21.1	2024-10-23T00:55:01.4119806	Recipes
 8fa6e938297d06bb7efdc8a49602b7743d8633ab data/shrinkray/advancement/recipes/tools/enlarge_ray.json
 a5554e0b27734923401a2add1e2d1a3b9f62dddb data/shrinkray/advancement/recipes/tools/shrink_ray.json
-339bb0c0f4e9ef2f3865ebaf0c96cabd42a4eb6a data/shrinkray/recipe/enlarge_ray.json
-e5a2b63afc2e345413dab69a55cf1c7eef347aa3 data/shrinkray/recipe/shrink_ray.json
+01dcac32eff403fdf268cd146da4a3ecfd4acf2b data/shrinkray/recipe/enlarge_ray.json
+4101b107745952528f8f9b298723bda251690812 data/shrinkray/recipe/shrink_ray.json
