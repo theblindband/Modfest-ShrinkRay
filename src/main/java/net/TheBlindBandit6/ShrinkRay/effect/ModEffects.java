@@ -17,13 +17,13 @@ public class ModEffects {
             DeferredRegister.create(BuiltInRegistries.MOB_EFFECT, ShrinkRay.MOD_ID);
 
     public static final Holder<MobEffect> SHRINK_EFFECT = MOB_EFFECTS.register("shrink",
-            () -> new ShrinkEffect(MobEffectCategory.NEUTRAL, 10217714)
+            () -> new ShrinkEffect(MobEffectCategory.NEUTRAL, 15902107)
                     .addAttributeModifier(Attributes.SCALE,
                             ResourceLocation.fromNamespaceAndPath(ShrinkRay.MOD_ID, "shrink"), -0.25f,
                             AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 
     public static final Holder<MobEffect> ENLARGE_EFFECT = MOB_EFFECTS.register("enlarge",
-            () -> new EnlargeEffect(MobEffectCategory.NEUTRAL, 15902107)
+            () -> new EnlargeEffect(MobEffectCategory.NEUTRAL, 10217714)
                     .addAttributeModifier(Attributes.SCALE,
                             ResourceLocation.fromNamespaceAndPath(ShrinkRay.MOD_ID, "enlarge"), 0.25f,
                             AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
