@@ -15,9 +15,9 @@ public class ModItems {
 
     //Items
     public static final DeferredItem<ShrinkRayItem> SHRINK_RAY = ITEMS.register("shrink_ray",
-            () -> new ShrinkRayItem(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).attributes(ShrinkRayItem.createAttributes()),1));
+            () -> new ShrinkRayItem(new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
     public static final DeferredItem<EnlargeRayItem> ENLARGE_RAY = ITEMS.register("enlarge_ray",
-            () -> new EnlargeRayItem(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).attributes(ShrinkRayItem.createAttributes()),1));
+            () -> new EnlargeRayItem(new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

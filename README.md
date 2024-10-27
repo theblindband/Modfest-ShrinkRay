@@ -1,6 +1,6 @@
 
-Shrink Gun
+Shrink Ray
 =======
-
-This mod adds a new tool/weapon, the shrink gun!    
-Use it to shrink the target down to half the size!
+This mod adds two new tools to use.
+These tools are the Shrink and Enlarge Ray.
+They change the scale of the entities it's used on by half either way.

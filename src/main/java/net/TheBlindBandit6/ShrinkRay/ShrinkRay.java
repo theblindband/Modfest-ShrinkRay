@@ -1,7 +1,11 @@
 package net.TheBlindBandit6.ShrinkRay;
 
 import net.TheBlindBandit6.ShrinkRay.effect.ModEffects;
+import net.TheBlindBandit6.ShrinkRay.entity.ModEntities;
+import net.TheBlindBandit6.ShrinkRay.entity.renderer.EnlargeRayProjectileRenderer;
+import net.TheBlindBandit6.ShrinkRay.entity.renderer.ShrinkRayProjectileRenderer;
 import net.TheBlindBandit6.ShrinkRay.item.ModItems;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
@@ -42,6 +46,7 @@ public class ShrinkRay
         //ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
         ModEffects.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
@@ -91,9 +96,8 @@ public class ShrinkRay
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            // Some client setup code
-            //LOGGER.info("HELLO FROM CLIENT SETUP");
-            //LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            EntityRenderers.register(ModEntities.SHRINK_RAY_PROJECTILE.get(), ShrinkRayProjectileRenderer::new);
+            EntityRenderers.register(ModEntities.ENLARGE_RAY_PROJECTILE.get(), EnlargeRayProjectileRenderer::new);
         }
     }
 }
