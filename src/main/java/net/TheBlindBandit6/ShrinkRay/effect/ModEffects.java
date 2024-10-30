@@ -28,6 +28,7 @@ public class ModEffects {
                             ResourceLocation.fromNamespaceAndPath(ShrinkRay.MOD_ID, "enlarge"), 0.25f,
                             AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 
+
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);
     }

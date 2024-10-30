@@ -5,5 +5,11 @@
   "item.shrinkray.enlarge_ray": "Enlarge Ray",
 
   "effect.shrinkray.shrink": "Shrink",
-  "effect.shrinkray.enlarge": "Enlarge"
+  "effect.shrinkray.enlarge": "Enlarge",
+
+  "advancements.adventure.shrink_ray.title": "Curse you tiny toilet!",
+  "advancements.adventure.shrink_ray.description": "Craft a shrink ray.",
+
+  "advancements.adventure.enlarge_ray.title": "Let's make it BIGGAH!",
+  "advancements.adventure.enlarge_ray.description": "Craft an enlarge ray."
 }

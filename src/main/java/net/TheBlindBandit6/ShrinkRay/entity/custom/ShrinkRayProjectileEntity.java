@@ -1,7 +1,6 @@
 package net.TheBlindBandit6.ShrinkRay.entity.custom;
 
 import net.TheBlindBandit6.ShrinkRay.effect.ModEffects;
-import net.TheBlindBandit6.ShrinkRay.entity.ModEntities;
 import net.minecraft.network.protocol.game.ClientboundAddEntityPacket;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.effect.MobEffectInstance;

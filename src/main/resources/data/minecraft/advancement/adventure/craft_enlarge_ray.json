@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:adventure/craft_shrink_ray",
+  "criteria": {
+    "enlarge_ray": {
+      "conditions": {
+        "items": [
+          {
+            "items": "shrinkray:enlarge_ray"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.adventure.enlarge_ray.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "shrinkray:enlarge_ray"
+    },
+    "title": {
+      "translate": "advancements.adventure.enlarge_ray.title"
+    }
+  },
+  "requirements": [
+    [
+      "enlarge_ray"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

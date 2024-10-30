@@ -1,7 +1,6 @@
 package net.TheBlindBandit6.ShrinkRay.item.custom;
 
 import net.TheBlindBandit6.ShrinkRay.entity.custom.EnlargeRayProjectileEntity;
-import net.TheBlindBandit6.ShrinkRay.entity.custom.ShrinkRayProjectileEntity;
 import net.TheBlindBandit6.ShrinkRay.item.Renderer.EnlargeRayRenderer;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.sounds.SoundEvents;
@@ -12,7 +11,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import software.bernie.geckolib.animatable.GeoItem;
@@ -24,7 +22,6 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 import java.util.function.Consumer;
 
 import static net.TheBlindBandit6.ShrinkRay.entity.ModEntities.ENLARGE_RAY_PROJECTILE;
-import static net.TheBlindBandit6.ShrinkRay.entity.ModEntities.SHRINK_RAY_PROJECTILE;
 
 public class EnlargeRayItem extends Item implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
@@ -46,8 +43,8 @@ public class EnlargeRayItem extends Item implements GeoItem {
                 Vec3 lookVec = player.getLookAngle();
 
                 // Create the new entity (replace CustomEntity with your entity class)
-                ShrinkRayProjectileEntity entity = new ShrinkRayProjectileEntity(ENLARGE_RAY_PROJECTILE.get(), level);
-                entity.setPos(player.getX(), player.getY() + player.getEyeHeight() - 0.22, player.getZ());
+                EnlargeRayProjectileEntity entity = new EnlargeRayProjectileEntity(ENLARGE_RAY_PROJECTILE.get(), level);
+                entity.setPos(player.getX(), player.getY() + player.getEyeHeight(), player.getZ());
 
                 // Set the entity's motion in the direction the player is looking
                 entity.setDeltaMovement(lookVec.scale(3)); // Adjust the scale for desired momentum
@@ -60,6 +57,14 @@ public class EnlargeRayItem extends Item implements GeoItem {
             }
         }
         return InteractionResultHolder.pass(player.getItemInHand(usedHand));
+    }
+
+    @Override
+    public void releaseUsing(ItemStack stack, Level world, LivingEntity entityLiving, int timeLeft) {
+        if (entityLiving instanceof Player) {
+            Player player = (Player) entityLiving;
+            player.releaseUsingItem();
+        }
     }
 
     //GeckoLib

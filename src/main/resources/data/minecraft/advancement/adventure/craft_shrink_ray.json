@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:adventure/root",
+  "criteria": {
+    "shrink_ray": {
+      "conditions": {
+        "items": [
+          {
+            "items": "shrinkray:shrink_ray"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.adventure.shrink_ray.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "shrinkray:shrink_ray"
+    },
+    "title": {
+      "translate": "advancements.adventure.shrink_ray.title"
+    }
+  },
+  "requirements": [
+    [
+      "shrink_ray"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
