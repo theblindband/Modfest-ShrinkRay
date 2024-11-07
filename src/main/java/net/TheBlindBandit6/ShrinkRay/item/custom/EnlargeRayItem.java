@@ -59,14 +59,6 @@ public class EnlargeRayItem extends Item implements GeoItem {
         return InteractionResultHolder.pass(player.getItemInHand(usedHand));
     }
 
-    @Override
-    public void releaseUsing(ItemStack stack, Level world, LivingEntity entityLiving, int timeLeft) {
-        if (entityLiving instanceof Player) {
-            Player player = (Player) entityLiving;
-            player.releaseUsingItem();
-        }
-    }
-
     //GeckoLib
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
