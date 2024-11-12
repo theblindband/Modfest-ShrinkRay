@@ -25,12 +25,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("OXS")
                 .pattern("IRI")
                 .define('I', Items.COPPER_INGOT)
-                .define('N', Items.NETHER_STAR)
+                .define('N', Blocks.HEAVY_CORE)
                 .define('O', Blocks.OBSERVER)
-                .define('X', Items.POPPED_CHORUS_FRUIT)
+                .define('X', Items.AMETHYST_SHARD)
                 .define('S', Blocks.CHISELED_COPPER)
                 .define('R', Blocks.REPEATER)
-                .unlockedBy("has_nether_star", has(Items.NETHER_STAR)).save(recipeOutput);
+                .unlockedBy("has_heavy_core", has(Blocks.HEAVY_CORE)).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ENLARGE_RAY.get(), 1)
                 .group("rays")
@@ -38,11 +38,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("OXS")
                 .pattern("ICI")
                 .define('I', Items.COPPER_INGOT)
-                .define('N', Items.NETHER_STAR)
+                .define('N', Blocks.HEAVY_CORE)
                 .define('O', Blocks.OBSERVER)
-                .define('X', Items.POPPED_CHORUS_FRUIT)
+                .define('X', Items.AMETHYST_SHARD)
                 .define('S', Blocks.CHISELED_COPPER)
                 .define('C', Blocks.COMPARATOR)
-                .unlockedBy("has_nether_star", has(Items.NETHER_STAR)).save(recipeOutput);
+                .unlockedBy("has_heavy_core", has(Blocks.HEAVY_CORE)).save(recipeOutput);
     }
 }
